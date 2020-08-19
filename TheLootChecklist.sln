@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLootChecklist", "TheLootChecklist.csproj", "{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ModMaker", "..\KingmakerModMaker2\ModMaker\ModMaker.shproj", "{7D3F9428-C134-47FE-9D04-305B4D330401}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\KingmakerModMaker2\ModMaker\ModMaker.projitems*{7d3f9428-c134-47fe-9d04-305b4d330401}*SharedItemsImports = 13
+		..\KingmakerModMaker2\ModMaker\ModMaker.projitems*{e4fd8dc7-157f-498c-b7f1-9550fec13af7}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}.Debug|x86.ActiveCfg = Debug|x86
+		{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}.Debug|x86.Build.0 = Debug|x86
+		{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}.Release|x86.ActiveCfg = Release|x86
+		{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAB0C854-9DD8-4AC6-B1C1-F6AC7BFA7646}
+	EndGlobalSection
+EndGlobal

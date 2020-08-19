@@ -1,0 +1,219 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E4FD8DC7-157F-498C-B7F1-9550FEC13AF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>TheLootChecklist</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Pathfinder Kingmaker\Mods\TheLootChecklist\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Deterministic>false</Deterministic>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Mods\TheLootChecklist\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TheLootChecklist</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\KingmakerLib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony-1.2">
+      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityModManager\0Harmony-1.2.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony12">
+      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityModManager\0Harmony12.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\KingmakerLib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\KingmakerLib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\KingmakerLib\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>..\..\KingmakerLib\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\KingmakerLib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\KingmakerLib\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\KingmakerLib\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\KingmakerLib\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityModManager">
+      <HintPath>..\..\KingmakerLib\UnityModManager.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include=".git\ms-persist.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core.cs" />
+    <Compile Include="DefaultLanguage.cs" />
+    <Compile Include="Loot\LootEntry.cs" />
+    <Compile Include="Loot\LootJSON.cs" />
+    <Compile Include="Loot\LootManager.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Menu\checklist.cs" />
+    <Compile Include="Menu\JSON.cs" />
+    <Compile Include="Menu\Language.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utilities\SettingsWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\0f\47332d5c4e4813b24cd6ccd128a8cdce87bb45" />
+    <None Include=".git\objects\12\bbd9c3f2a9006306b8524c34e2b13261fc3308" />
+    <None Include=".git\objects\1a\4189ef9131a7fb726bfcbc8f0a03cc2e69fcdd" />
+    <None Include=".git\objects\1c\cfbd594416a29b0df6f819b579dfa7e0f93a3f" />
+    <None Include=".git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <None Include=".git\objects\24\0ab717bf9f61c0a1ca2745532dd58831b7e910" />
+    <None Include=".git\objects\3a\8157ead8bc5100cd2c28e09dfa7644bdccac13" />
+    <None Include=".git\objects\42\aa9d0eedbcf2cd7e6860926bb9f2ee0c6450b7" />
+    <None Include=".git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904" />
+    <None Include=".git\objects\4c\e6fddec962ff3b86038d9939b6be5dfc1e6351" />
+    <None Include=".git\objects\61\5241fc8a5b935b7c89bd57741deccaf2c0a729" />
+    <None Include=".git\objects\69\fb9fcf13fffcafbee18e18fb744e12fddc8fd0" />
+    <None Include=".git\objects\6e\47037606123ab62c6a4db0b87b0617435f5587" />
+    <None Include=".git\objects\78\7b03d3d1e657891481bff7ed656c9790d1683e" />
+    <None Include=".git\objects\7b\e93c03a112d0fdae3a40a4d609af32921c63e7" />
+    <None Include=".git\objects\81\df6770f0dd8a0b41f24f0e70f4e347d2783c03" />
+    <None Include=".git\objects\85\e4eb196c5eaca71d639d6ed792441a2fd058cf" />
+    <None Include=".git\objects\88\46391af0cfda3fcb21a5af9d8775d73c91a9a7" />
+    <None Include=".git\objects\89\37b5dd32b301f8213d85d3fd711eceb39ad8d2" />
+    <None Include=".git\objects\8b\60838835ecd7c3584ca8698bac0bcfd2361838" />
+    <None Include=".git\objects\92\2307851669a2d537ece159b514e4c17a62f5e1" />
+    <None Include=".git\objects\93\0b25c370186886a7280db41b45dd82e281dd59" />
+    <None Include=".git\objects\95\f1b42a8281ea7485b1398ae87acee96ba2f4b9" />
+    <None Include=".git\objects\98\adcd4cb6e053d8f97c942ceb110228c0d0ccc8" />
+    <None Include=".git\objects\9b\6539314f15f2630a11d17da76fa00ea8f211e5" />
+    <None Include=".git\objects\a3\133d00e6aa9c8a4985684bd6c9fc38f90c6d32" />
+    <None Include=".git\objects\a4\b544b3cc70716b5cb17b11f37b09deb240bf5f" />
+    <None Include=".git\objects\a9\4456c2f31844c294abd8c3662397de2e792f85" />
+    <None Include=".git\objects\b2\12cc9d50b651182bec0a27951b19da4631a006" />
+    <None Include=".git\objects\b4\f9857402b91d11d85077687b4260f64ae6a243" />
+    <None Include=".git\objects\b8\8b70d6b74cf15c95cb00358e89906712487d30" />
+    <None Include=".git\objects\bc\91520619f070ca037f903591ea05632de7cbf3" />
+    <None Include=".git\objects\c0\2118e6857d65a8690819bbc4a24de1bb70a0f5" />
+    <None Include=".git\objects\c8\cd894924fc907ecdfb63cf9079bdef4be56d03" />
+    <None Include=".git\objects\d4\dd102bed1cfa05cdb4683d63a96625c353ad1c" />
+    <None Include=".git\objects\d5\840e10707f28d082ab64a8774250eaab73a43d" />
+    <None Include=".git\objects\d8\a21dbbed74a4a53b97a88d88d1ae225011cc09" />
+    <None Include=".git\objects\dd\9d3072faa8dc2c83b3f93b8b3632e76491a870" />
+    <None Include=".git\objects\e5\1f009fab6c285bc63d4ea8de88c563dbad127b" />
+    <None Include=".git\objects\e5\d741b02bf983924a65a1ceff988a9dc9d9941e" />
+    <None Include=".git\objects\f2\88702d2fa16d3cdf0035b15a9fcbc552cd88e7" />
+    <None Include=".git\objects\f6\ae67d87b42e80c3275ff1551518c93d679676e" />
+    <None Include=".git\objects\ff\e29b3c93848f5604ec8987cfc2da122c612d40" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".vs\TheLootChecklist\v16\.suo" />
+    <None Include=".vs\TheLootChecklist\v16\Server\sqlite3\db.lock" />
+    <None Include=".vs\TheLootChecklist\v16\Server\sqlite3\storage.ide" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+  </ItemGroup>
+  <Import Project="..\KingmakerModMaker2\ModMaker\ModMaker.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
