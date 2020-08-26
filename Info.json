@@ -1,0 +1,10 @@
+﻿{
+  "Id": "TheLootChecklist",
+  "DisplayName": "The Loot Checklist",
+  "Author": "hambeard",
+  "Version": "1.0.2",
+  "ManagerVersion": "0.22.8",
+  "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/170",
+  "Repository": "https://raw.githubusercontent.com/thehambeard/UMMupdates/master/Repository.json",
+  "EntryMethod": "TheLootChecklist.Main.Load"
+}

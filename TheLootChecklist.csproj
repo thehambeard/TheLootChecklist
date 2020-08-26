@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\Pathfinder Kingmaker\Mods\TheLootChecklist\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,12 +42,6 @@
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\KingmakerLib\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="0Harmony-1.2">
-      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityModManager\0Harmony-1.2.dll</HintPath>
-    </Reference>
-    <Reference Include="0Harmony12">
-      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityModManager\0Harmony12.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\KingmakerLib\Assembly-CSharp.dll</HintPath>
@@ -77,9 +71,6 @@
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>..\..\KingmakerLib\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AudioModule">
       <HintPath>..\..\KingmakerLib\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
@@ -97,9 +88,6 @@
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
       <HintPath>..\..\KingmakerLib\UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\..\..\Games\Pathfinder - Kingmaker\Kingmaker_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\KingmakerLib\UnityEngine.TextRenderingModule.dll</HintPath>
@@ -204,6 +192,9 @@
     <None Include=".vs\TheLootChecklist\v16\.suo" />
     <None Include=".vs\TheLootChecklist\v16\Server\sqlite3\db.lock" />
     <None Include=".vs\TheLootChecklist\v16\Server\sqlite3\storage.ide" />
+    <None Include="Info.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -216,4 +207,13 @@
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+  mkdir $(TargetName)
+  del $(TargetName).zip /Q
+  copy $(TargetName)$(TargetExt) .\$(TargetName)\$(TargetName)$(TargetExt) /Y
+  copy info.json .\$(TargetName)\info.json /Y
+  "C:\Program Files\7-Zip\7z.exe" u -tzip $(TargetName).zip $(TargetName)
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
